@@ -2040,6 +2040,14 @@ func (s *subscriptionService) UpdateSubscription(ctx context.Context, subscripti
 		subscription.EndDate = req.CancelAt
 	}
 
+	if req.CollectionMethod != nil {
+		subscription.CollectionMethod = string(*req.CollectionMethod)
+	}
+
+	if req.PaymentBehavior != nil {
+		subscription.PaymentBehavior = string(*req.PaymentBehavior)
+	}
+
 	subscription.CancelAtPeriodEnd = req.CancelAtPeriodEnd
 
 	// Update the subscription in the database

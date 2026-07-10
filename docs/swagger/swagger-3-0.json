@@ -24621,6 +24621,12 @@
           },
           "status": {
             "$ref": "#/components/schemas/types.SubscriptionStatus"
+          },
+          "collection_method": {
+            "$ref": "#/components/schemas/types.CollectionMethod"
+          },
+          "payment_behavior": {
+            "$ref": "#/components/schemas/types.PaymentBehavior"
           }
         }
       },
